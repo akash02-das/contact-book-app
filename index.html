@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Book</title>
+
+  <!--Fav Icon-->
+  <link rel="shortcut icon" href="./favicon/favicon_io/favicon.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous" />
+
+  <!--Google Font-->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- Internal CSS -->
+  <style>
+    h1,
+    h2 {
+      font-family: "Roboto Condensed", sans-serif;
+    }
+
+    input:focus {
+      box-shadow: none !important;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container py-5">
+    <!-- Title -->
+    <h1 class="display-4 text-center text-success">
+      Welcome To Contact Book
+    </h1>
+
+    <h2 class="display-5 text-center text-info">
+      Feel Free To Save Contact Info
+    </h2>
+
+    <!-- Input Field -->
+    <div class="row my-5">
+      <div class="col">
+        <input type="text" placeholder="Enter Full Name" id="nameField" class="form-control" />
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Enter Phone No." id="phoneField" class="form-control" />
+      </div>
+      <div class="col">
+        <input type="text" placeholder="Enter Email Address" id="emailField" class="form-control" />
+      </div>
+      <div class="col">
+        <button id="saveContact" class="btn btn-primary">Save Contact</button>
+      </div>
+    </div>
+
+    <!-- Bootstrap Contact Table -->
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th>Full Name</th>
+          <th>Phone No.</th>
+          <th>Email Address</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="tBody"></tbody>
+    </table>
+  </div>
+
+  <!-- Bootstrap Modal Edit Contact -->
+  <div class="modal fade" id="contactEditModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Edit Contact</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="edit-name" class="col-form-label">Edit Name:</label>
+              <input type="text" class="form-control" id="edit-name" />
+            </div>
+            <div class="form-group">
+              <label for="edit-phone" class="col-form-label">Edit Phone:</label>
+              <input type="text" class="form-control" id="edit-phone" />
+            </div>
+            <div class="form-group">
+              <label for="edit-email" class="col-form-label">Edit Email:</label>
+              <input type="email" class="form-control" id="edit-email" />
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" id="updateContact" class="btn btn-primary">
+            Update Contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap Modal Delete Contact -->
+  <div class="modal fade" id="contactDeleteModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Delete Contact</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Are you sure you want to permanently delete this contact?
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">
+            Close
+          </button>
+          <button type="button" id="deleteContact" class="btn btn-danger">
+            Delete Contact
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+  </script>
+  <script src="./dist/bundle.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+{
+  "contacts": [
+    {
+      "name": "Benjamin Emmerich",
+      "phone": "01914567890",
+      "email": "Mackenzie16@yahoo.com",
+      "id": 3
+    },
+    {
+      "id": 8,
+      "name": "Marielle Turner",
+      "email": "Hannah.Hodkiewicz80@hotmail.com"
+    },
+    {
+      "name": "Mrs. Luna Simonis",
+      "phone": "00881234567",
+      "email": "Gia3999@hotmail.com",
+      "id": 10
+    },
+    {
+      "name": "Mr. Biplob Das",
+      "phone": "01716142380",
+      "email": "biplob.das@yahoo.com",
+      "id": 14
+    },
+    {
+      "name": "Mr. Aku",
+      "phone": "01914567890",
+      "email": "akuuuu@gmail.com",
+      "id": 16
+    },
+    {
+      "name": "Akash das",
+      "phone": "01629446086",
+      "email": "akash@gmail.com",
+      "id": 17
+    }
+  ]
+}
