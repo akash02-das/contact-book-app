@@ -20,7 +20,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "json-server": "^0.16.1",
     "sweetalert": "^2.1.2"
   }
